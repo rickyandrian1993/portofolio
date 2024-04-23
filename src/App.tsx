@@ -1,10 +1,18 @@
 import "./App.css";
+import ProfilePicture from "./assets/profile.jpg";
 
 function App() {
   return (
-    <>
-      <h1>Ricky Andrian's Portofolio</h1>
-    </>
+    <main>
+      <section id="home" className="home-section">
+        <div className="profile-display">
+          <div className="profile-display-in">
+            <img src={ProfilePicture} title="" alt="" />
+          </div>
+        </div>
+        <h1>Ricky Andrian</h1>
+      </section>
+    </main>
   );
 }
 
