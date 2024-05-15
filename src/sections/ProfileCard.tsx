@@ -4,7 +4,9 @@ import ProfileImg from "../assets/profile.jpg";
 function ProfilePicture() {
   return (
     <PictureCard>
-      <img src={ProfileImg} title="" alt="" />
+      <div className="img-card">
+        <img src={ProfileImg} title="" alt="" />
+      </div>
     </PictureCard>
   );
 }
@@ -39,10 +41,17 @@ const PictureCard = styled.div`
     filter: blur(3.5rem);
   }
 
-  img {
+  .img-card {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   @keyframes rotation {
