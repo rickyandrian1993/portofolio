@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProfileImg from "../../assets/profile.jpg";
+import ProfileImg from "../assets/profile.jpg";
 
 function ProfilePicture() {
   return (
