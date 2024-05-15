@@ -13,6 +13,21 @@ function ProfilePicture() {
   );
 }
 
-const PictureCard = styled.div``;
+const PictureCard = styled.div`
+  .profile-display {
+    &-in {
+      width: 300px;
+      height: 300px;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 12px solid #d7dde8;
+      box-shadow: 0 0 0 12ox #f8fafd;
+      &::img {
+        max-width: 100%;
+      }
+    }
+  }
+`;
 
 export default ProfilePicture;
