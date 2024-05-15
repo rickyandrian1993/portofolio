@@ -4,28 +4,53 @@ import ProfileImg from "../assets/profile.jpg";
 function ProfilePicture() {
   return (
     <PictureCard>
-      <div className="profile-display">
-        <div className="profile-display-in">
-          <img src={ProfileImg} title="" alt="" />
-        </div>
-      </div>
+      <img src={ProfileImg} title="" alt="" />
     </PictureCard>
   );
 }
 
 const PictureCard = styled.div`
-  .profile-display {
-    &-in {
-      width: 300px;
-      height: 300px;
-      border-radius: 999px;
-      overflow: hidden;
-      margin: 0 auto;
-      border: 12px solid #d7dde8;
-      box-shadow: 0 0 0 12ox #f8fafd;
-      &::img {
-        max-width: 100%;
-      }
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+  background: var(--clr-1);
+  border-radius: 50%;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 15s linear infinite;
+  }
+
+  &::after {
+    filter: blur(3.5rem);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
     }
   }
 `;
