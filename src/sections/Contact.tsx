@@ -10,31 +10,19 @@ import ButtonIcon from "../components/Buttons/Icon";
 function Contact() {
   return (
     <div className="flex justify-center gap-4">
-      <ButtonIcon
-        url="https://www.instagram.com/_rickyandrian_/"
-        tooltip="Instagram"
-      >
+      <ButtonIcon url="https://www.instagram.com/_rickyandrian_/">
         <RiInstagramLine />
       </ButtonIcon>
-      <ButtonIcon
-        url="https://www.facebook.com/rickyandrian1993"
-        tooltip="Facebook"
-      >
+      <ButtonIcon url="https://www.facebook.com/rickyandrian1993">
         <RiFacebookBoxLine />
       </ButtonIcon>
-      <ButtonIcon
-        url="https://www.linkedin.com/in/andrian-ricky/"
-        tooltip="LinkedIn"
-      >
+      <ButtonIcon url="https://www.linkedin.com/in/andrian-ricky/">
         <RiLinkedinLine />
       </ButtonIcon>
-      <ButtonIcon url="https://github.com/rickyandrian1993" tooltip="Github">
+      <ButtonIcon url="https://github.com/rickyandrian1993">
         <RiGithubLine />
       </ButtonIcon>
-      <ButtonIcon
-        url="https://discord.com/users/ricky_andrian"
-        tooltip="Discord"
-      >
+      <ButtonIcon url="https://discord.com/users/ricky_andrian">
         <RiDiscordLine />
       </ButtonIcon>
     </div>
