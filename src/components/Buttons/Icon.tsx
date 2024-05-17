@@ -23,7 +23,6 @@ function ButtonIcon(props: Props) {
       }}
       href={props.url}
       target="_blank"
-      className="btn btn-circle btn-primary"
     >
       {props.children}
     </motion.a>

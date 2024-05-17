@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 type AnimatedTextProps = {
   text: string;
-  className: string;
+  className?: string;
   el?: keyof JSX.IntrinsicElements;
 };
 
