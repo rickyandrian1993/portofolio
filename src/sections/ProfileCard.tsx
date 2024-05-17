@@ -120,13 +120,6 @@ const Card = styled.div`
     transform: scale(0);
     transition: 0.5s;
 
-    .text {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 0.2em solid green; /* Cursor */
-    }
-
     .title {
       position: relative;
       color: #fff;
@@ -215,6 +208,20 @@ const Card = styled.div`
     width: 340px;
     height: 340px;
     transition: 0.2s;
+
+    .img-card {
+      width: 230px;
+      height: 230px;
+    }
+
+    .content {
+      .title {
+        font-size: 1.5em;
+        span {
+          font-size: 0.5em;
+        }
+      }
+    }
   }
 `;
 
