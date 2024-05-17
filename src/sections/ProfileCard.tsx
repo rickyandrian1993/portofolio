@@ -15,7 +15,6 @@ function ProfileCard() {
       <Card>
         <b></b>
         <div className="img-card">
-          {/* <span>Hello</span> */}
           <img src={ProfileImg} title="Ricky Andrian" alt="Ricky Andrian" />
         </div>
         <div className="content">
@@ -111,20 +110,6 @@ const Card = styled.div`
     transition: 0.4s;
   }
 
-  /* img {
-    position: absolute;
-    z-index: 3;
-    scale: 0.9;
-    opacity: 0.25;
-    transition: 0.5s;
-  }
-
-  &:hover img {
-    scale: 0.8;
-    opacity: 0.9;
-    transform: translateY(-70px);
-  } */
-
   .content {
     position: absolute;
     z-index: 3;
@@ -135,12 +120,19 @@ const Card = styled.div`
     transform: scale(0);
     transition: 0.5s;
 
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.2em solid green; /* Cursor */
+    }
+
     .title {
       position: relative;
       color: #fff;
       font-weight: 500;
       line-height: 1em;
-      font-size: 1.4em;
+      font-size: 1.7em;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       text-align: center;
@@ -149,6 +141,14 @@ const Card = styled.div`
         text-align: center;
         font-weight: 300;
         font-size: 0.7em;
+
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 0.2em solid green;
+        animation: typeAndDelete 4s steps(12) infinite,
+          blinkCursor 0.5s step-end infinite alternate;
+        margin-top: 0.5em;
       }
     }
     .sci {
@@ -188,6 +188,27 @@ const Card = styled.div`
   &:hover .content {
     transform: scale(1);
     bottom: 25px;
+  }
+
+  @keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+
+  @keyframes typeAndDelete {
+    0%,
+    10% {
+      width: 0;
+    }
+    45%,
+    55% {
+      width: 100%;
+    } /* adjust width based on content */
+    90%,
+    100% {
+      width: 0;
+    }
   }
 
   @media screen and (max-width: 767px) {
