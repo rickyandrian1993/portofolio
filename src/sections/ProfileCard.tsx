@@ -14,7 +14,10 @@ function ProfileCard() {
     <>
       <Card>
         <b></b>
-        <img src={ProfileImg} title="Ricky Andrian" alt="Ricky Andrian" />
+        <div className="img-card">
+          {/* <span>Hello</span> */}
+          <img src={ProfileImg} title="Ricky Andrian" alt="Ricky Andrian" />
+        </div>
         <div className="content">
           <h1 className="title text-center">
             Ricky Andrian
@@ -85,7 +88,30 @@ const Card = styled.div`
     z-index: 2;
   }
 
-  img {
+  .img-card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border: 4px solid #03a9f4;
+    border-radius: 50%;
+    scale: 0.9;
+    z-index: 3;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &:hover .img-card {
+    scale: 0.8;
+    opacity: 0.9;
+    transform: translateY(-70px);
+    transition: 0.4s;
+  }
+
+  /* img {
     position: absolute;
     z-index: 3;
     scale: 0.9;
@@ -97,7 +123,7 @@ const Card = styled.div`
     scale: 0.8;
     opacity: 0.9;
     transform: translateY(-70px);
-  }
+  } */
 
   .content {
     position: absolute;
