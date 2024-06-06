@@ -5,7 +5,7 @@ import {
   RiInstagramLine,
   RiLinkedinLine,
 } from "@remixicon/react";
-import ButtonIcon from "../components/Buttons/Icon";
+import ButtonIcon from "../Buttons/Icon";
 
 function Contact() {
   return (
